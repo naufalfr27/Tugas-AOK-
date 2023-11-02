@@ -1,0 +1,106 @@
+package pemrogramandasar;
+import java.util.Scanner;
+ 
+public class AOK_KonversiBilangan {
+    public static void main(String[] args) {
+        Scanner x = new Scanner (System.in);
+        
+        while (true){
+        System.out.println("\nKonversi Bilangan");
+        System.out.println("1. Biner ke Desimal");
+        System.out.println("2. Desimal ke Biner");
+        System.out.println("3. Biner ke Hexa");
+        System.out.println("4. Hexa ke Biner");
+        System.out.println("5. Desimal ke Hexa");
+        System.out.println("6. Hexa ke Desimal");
+        System.out.print("Masukan Pilihan :");
+        int pilihan = x.nextInt();
+        
+        switch (pilihan){
+            case 1 :
+                BinerKeDesimal();
+                break;
+            case 2 :
+                DesimalKeBiner();
+                break;
+            case 3 :
+                BinerKeHexa();
+                break;
+            case 4 :
+                HexaKeBiner();
+                break;
+            case 5 :
+                DesimalKeHexa();
+                break;
+            case 6 : 
+                HexaKeDesimal();
+                break;
+            default:
+                System.out.println("\nPilih angka dari 1-6");
+                
+        }
+                
+                
+                
+        }
+        
+                        
+    }
+    
+    public static void BinerKeDesimal(){
+        Scanner x = new Scanner (System.in);
+        System.out.print("\nMasukkan bilangan biner: ");
+        String biner = x.nextLine();
+        int desimal = Integer.parseInt(biner, 2);
+        System.out.println("Hasil konversi: " + desimal);
+                
+    }
+    
+    public static void DesimalKeBiner(){
+        Scanner x = new Scanner (System.in);
+        System.out.print("\nMasukkan bilangan desimal: ");
+        int desimal = x.nextInt();
+        String biner = Integer.toBinaryString(desimal);
+        System.out.println("Hasil konversi: " + biner);
+        
+    }
+    
+    public static void BinerKeHexa(){
+        Scanner x = new Scanner (System.in);
+        System.out.print("\nMasukkan bilangan biner: ");
+        String biner = x.nextLine();
+        int desimal = Integer.parseInt(biner, 2);
+        String hexa = Integer.toHexString(desimal).toUpperCase();
+        System.out.println("Hasil konversi: " + hexa);
+        
+    }
+    
+    public static void HexaKeBiner(){
+        Scanner x = new Scanner (System.in);
+        System.out.print("\nMasukkan bilangan hexa: ");
+        String hexa = x.nextLine();
+        int desimal = Integer.parseInt(hexa, 16);
+        String biner = Integer.toBinaryString(desimal);
+        System.out.println("Hasil konversi: " + biner);
+        
+    }
+    
+    public static void DesimalKeHexa(){
+        Scanner x = new Scanner (System.in);
+        System.out.print("\nMasukkan bilangan desimal: ");
+        int desimal = x.nextInt();
+        String hexa = Integer.toHexString(desimal).toUpperCase();
+        System.out.println("Hasil konversi: " + hexa);
+        
+    }
+    
+    public static void HexaKeDesimal(){
+        Scanner x = new Scanner (System.in);
+        System.out.print("\nMasukkan bilangan heksadesimal: ");
+        String hexa = x.nextLine();
+        int desimal = Integer.parseInt(hexa, 16);
+        System.out.println("Hasil konversi: " + desimal);
+        
+    }
+    
+}
